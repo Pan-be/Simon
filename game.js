@@ -62,12 +62,25 @@ const startOver = () => {
 	started = false
 }
 
-$(".btn").click(clickHandler)
-
-$(document).keypress(() => {
+const firstStart = () => {
 	if (!started) {
 		started = true
 		nextSequence()
 		$("#level-title").text(`Level ${level}`)
 	}
+}
+
+$(".btn").click(clickHandler)
+
+$(document).keypress(() => {
+	firstStart()
+})
+
+$(".mobile-version-button").click(() => {
+	firstStart()
+})
+
+$(".refresh-btn").click(() => {
+	startOver()
+	firstStart()
 })

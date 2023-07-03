@@ -3,7 +3,8 @@ body {
 	background-color: #011f3f;
 }
 
-#level-title {
+#level-title,
+.mobile-version-button {
 	font-family: "Press Start 2P", cursive;
 	font-size: 3rem;
 	margin: 5%;
@@ -14,6 +15,29 @@ body {
 	display: block;
 	width: 50%;
 	margin: auto;
+}
+
+span {
+	display: none;
+}
+
+.mobile-version-button {
+	font-size: 1.5em;
+	background-color: #011f3f;
+	color: #fef2bf;
+	width: auto;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 5px solid #dbedf3;
+}
+
+.mobile-version-button:active {
+	background-color: #7895cb;
+	border: 3px solid #dbedf3;
+}
+
+.mobile-version-button:hover {
+	background-color: #7895cb;
 }
 
 .btn {
@@ -58,4 +82,30 @@ footer {
 a {
 	color: white;
 	text-decoration: none;
+}
+
+.refresh-btn {
+	position: sticky;
+	top: 20px;
+	right: -20px;
+	z-index: 9999;
+	margin-left: 80vw;
+	cursor: pointer;
+}
+
+.refresh-btn button {
+	cursor: pointer;
+}
+
+.refresh-btn i {
+	font-size: 60px;
+}
+
+@media (min-width: 1200px) {
+	.mobile-version-button {
+		display: none;
+	}
+	span {
+		display: inline;
+	}
 }
