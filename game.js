@@ -49,10 +49,17 @@ const checkAnswer = (currentLevel) => {
 		sound.play()
 		$("body").addClass("game-over")
 		setTimeout(() => $("body").removeClass("game-over"), 200)
-		$("#level-title").text("Game Over, Press Any Key to Restart")
-		started = false
-		gamePattern = []
+		$("#level-title").text(
+			`Game Over, You Have Reached Level ${level}. Press Any Key to Restart`
+		)
+		startOver()
 	}
+}
+
+const startOver = () => {
+	level = 0
+	gamePattern = []
+	started = false
 }
 
 $(".btn").click(clickHandler)
@@ -61,6 +68,6 @@ $(document).keypress(() => {
 	if (!started) {
 		started = true
 		nextSequence()
-		$("#level-title").text("Level 0")
+		$("#level-title").text(`Level ${level}`)
 	}
 })
