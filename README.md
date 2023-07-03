@@ -37,4 +37,4 @@ Simon Game is a memory-based game where players need to remember and repeat a se
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## License
-This project is licensed under the [MIT License](link_do_licencji).
+This project is licensed under the [MIT License](LICENSE).
